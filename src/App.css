@@ -1,3 +1,51 @@
+.app {
+  --surface: #f3f5f2;
+  --text: #202820;
+  --muted: #536254;
+  --control: #ffffff;
+  min-height: 100vh;
+  padding: 2rem clamp(1rem, 5vw, 4rem);
+  color: var(--text);
+  background: var(--surface);
+  transition: color 180ms ease, background-color 180ms ease;
+}
+
+.app--dark {
+  --surface: #202820;
+  --text: #edf2e9;
+  --muted: #c1ccbd;
+  --control: #354135;
+}
+
+.app > * {
+  max-width: 48rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.app p,
+.app label {
+  color: var(--muted);
+}
+
+.app button,
+.app select {
+  margin: 0.5rem 0.75rem 0.5rem 0;
+  padding: 0.55rem 0.8rem;
+  color: var(--text);
+  background: var(--control);
+  border: 1px solid #879487;
+  border-radius: 4px;
+  font: inherit;
+}
+
+.app button {
+  cursor: pointer;
+}
+
+.app button:hover {
+  border-color: #3e7651;
+}
 #root {
   max-width: 1280px;
   margin: 0 auto;
